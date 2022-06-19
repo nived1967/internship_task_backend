@@ -1,0 +1,25 @@
+{
+  "name": "rest_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon src/server.js",
+    "start": "node src/server.js -p $PORT"
+  },
+  "engines": {
+    "node": "16.15.0",
+    "npm": "8.9.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
