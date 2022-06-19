@@ -15,5 +15,7 @@ app.use(express.json())
 const scoreboardRouter=require('../routes/scoreboard')
 app.use('/scoreboard',scoreboardRouter)
 
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
 
-app.listen(process.env.PORT || 3000,()=>console.log('Server Started'))
+app.listen(port,()=>console.log('Server Started'))
