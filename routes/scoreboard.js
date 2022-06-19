@@ -17,14 +17,7 @@ router.get('/', async (req,res)=>{
 
 
 router.get('/:id',getScore,async (req,res)=>{
-    try{
-        const scoreboard=await Scoreboard.findById(req.params.id);
-        res.json(scoreboard);
-    }
-    catch(err)
-    {
-        res.json({message:err});
-    }
+    res.json(res.scoreboard)
 })
 
 router.post('/',async (req,res)=>{
