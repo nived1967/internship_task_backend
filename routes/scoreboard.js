@@ -41,7 +41,10 @@ router.post('/',async (req,res)=>{
 router.patch('/:id',getScore,async (req,res)=>{
     if(req.body.name!=null)
     {
-        res.scoreboard.name=req.body.name
+        res.scoreboard.name=req.body.name;
+        res.scoreboard.pno=req.body.pno;
+        res.scoreboard.email=req.body.email;
+        res.scoreboard.hobbies=req.body.hobbies;
     }
     // if(req.body.score!=null)
     // {
