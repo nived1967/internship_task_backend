@@ -22,8 +22,10 @@ router.get('/:id',getScore,async (req,res)=>{
 
 router.post('/',async (req,res)=>{
     const scoreboard=new Scoreboard({
-        game:req.body.game,
-        person:req.body.person
+        name:req.body.name,
+        pno:req.body.pno,
+        email:req.body.email,
+        hobbies:req.body.hobbies
     })
 
     try{
@@ -37,9 +39,9 @@ router.post('/',async (req,res)=>{
 
 
 router.patch('/:id',getScore,async (req,res)=>{
-    if(req.body.game!=null)
+    if(req.body.name!=null)
     {
-        res.scoreboard.game=req.body.game
+        res.scoreboard.name=req.body.name
     }
     // if(req.body.score!=null)
     // {
